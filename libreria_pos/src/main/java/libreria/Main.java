@@ -14,7 +14,11 @@ public class Main {
         Venta venta = new Venta();
         venta.agregarLibro(libro1, 2);
         venta.agregarLibro(libro2, 1);
+        venta.aplicarDescuento(new BigDecimal("10"));
 
-        System.out.println("Subtotal: $" + venta.calcularSubtotal());
+        System.out.println("Subtotal:  $" + venta.calcularSubtotal());
+        System.out.println("Descuento: $" + venta.calcularDescuento());
+        System.out.println("IVA (16%): $" + venta.calcularIva());
+        System.out.println("Total:     $" + venta.calcularTotal());
     }
 }
